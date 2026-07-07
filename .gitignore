@@ -1,0 +1,76 @@
+# ------------ UNITY ÇEKİRDEK / YENİDEN ÜRETİLEBİLENLER ------------
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# ------------ PROJEDE OLMAMASI GEREKEN/OTOMATİK OLUŞAN DOSYALAR ------------
+# (Unity bunları tekrar üretir)
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# ------------ IDE / ARAÇ İZLERİ ------------
+.vs/
+.vscode/
+.idea/
+.gradle/
+
+# ------------ ÇIKTI PAKETLERİ (repolar yerine release pipeline) ------------
+*.apk
+*.aab
+*.ipa
+*.app
+*.unitypackage
+
+# ------------ OS ÇÖPLERİ ------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ------------ ADDRESSABLES (ayarlar kalsın, build çıktıları dışarı) ------------
+# Grup/ayar assetleri repoda tutulur:
+!Assets/AddressableAssetsData/**/*.asset
+!Assets/AddressableAssetsData/**/*.json
+!Assets/AddressableAssetsData/**/*.schema
+# Build çıktıları ve server verisi repo dışı:
+Assets/AddressableAssetsData/*/Build*/
+Assets/AddressableAssetsData/*/Build*
+Assets/AddressableAssetsData/*/ServerData/
+
+# ------------ IŞIKLANDIRMA / OCCLUSION (depo şişmesin; editor’da REBAKE) ------------
+Assets/**/Lightmap-*.exr
+Assets/**/Lightmap-*.png
+Assets/**/LightingData.asset
+Assets/**/ReflectionProbe-*.exr
+Assets/**/OcclusionCullingData.asset
+# (İhtiyaç halinde bu satırları yoruma alıp assetleri track edebilirsin.)
+
+# ------------ NAVMESH (tercihe bağlı; re-bake ediyorsan aç) ------------
+# Assets/**/NavMesh.asset
+
+# ------------ META DOSYALARI / KRİTİK PROJE YAPISI ------------
+# Not: Assets/ ve ProjectSettings/ ignore edilmiyor; .meta dosyaları otomatik track edilir.
+# Yine de güvence için:
+!Assets/**/*.meta
+!ProjectSettings/**
+!Packages/manifest.json
+!Packages/packages-lock.json
